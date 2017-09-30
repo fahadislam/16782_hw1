@@ -48,7 +48,7 @@ for i = 1:2000
     
     %get direction index for robotpos w.r.t the motion primitives
     normalized_angle = wrapTo2Pi(robotpos(3));
-    dir = fix(normalized_angle / (2*pi / num_angles)) + 1;
+    dir = fix(normalized_angle / (2*pi / num_angles) + 0.5) + 1;
     if (dir == 9)
       dir = 1;
     end;
